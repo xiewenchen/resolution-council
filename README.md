@@ -1,22 +1,18 @@
 # 🏛️ Resolution Council AI
 
-> **Stop designing system architecture manually.**
-
-One-call system design compiler. Natural language in → production architecture out.
+> Turn requirements into system architecture in one call.
 
 ```text
-Before: Chat with LLM  →  vague prose, no structure, no trade-offs
-After:  resolve(task)  →  architecture + cost + risk + roadmap + ranked trade-offs
+Before: LLM chat → vague answer
+After:  resolve(task) → architecture + trade-offs + roadmap
 ```
 
 ```python
 from resolution_council import ResolutionCouncil
-
-plan = ResolutionCouncil().resolve("build a real-time translation system")
-print(plan.final_plan)
+ResolutionCouncil().resolve("build a real-time translation system").final_plan
 ```
 
-**Zero dependencies. Deterministic. <1ms.**
+Zero dependencies. Deterministic. <1ms.
 
 ---
 
@@ -104,17 +100,15 @@ Natural Language Input
 
 ---
 
-## Why it's different
+## Why this, not an LLM
 
-| Traditional approach | Resolution Council AI |
-|---------------------|----------------------|
-| Chat with an LLM, get prose | **Structured architecture output** |
-| One answer, no alternatives | **5 perspectives, ranked & compared** |
-| No cost/risk analysis | **Explicit trade-offs quantified** |
-| Hallucinates confidently | **Deterministic, reproducible results** |
-| Requires prompt engineering | **Natural language input, zero configuration** |
-
-**We built an AI that thinks like a system architect, not a chatbot.**
+| LLM chat | Resolution Council AI |
+|----------|----------------------|
+| Vague prose | **Structured architecture** |
+| One opinion | **5 perspectives, ranked** |
+| No trade-offs | **Cost, risk, scalability quantified** |
+| Hallucinates | **Deterministic, reproducible** |
+| Prompt engineering | **Natural language, zero config** |
 
 ---
 
@@ -122,36 +116,8 @@ Natural Language Input
 
 ```bash
 pip install resolution-council
-```
-
-- **Zero dependencies** — pure Python 3.10+
-- **<5ms execution** — no API calls, no network
-- **Deterministic** — same input always produces same output
-
----
-
-## Demo
-
-```bash
-# Single task
 python demo.py "build a real-time translation system"
-
-# Run all preset demos
-python demo.py --demo all
 ```
-
-Preset demos: real-time translation · RAG knowledge base · multi-agent customer service · high-concurrency API gateway
-
----
-
-## The core insight
-
-```text
-System architecture design is a structured reasoning problem,
-not a language generation problem.
-```
-
-Resolution Council AI replaces "manual system design thinking" with "structured AI architecture generation."
 
 ---
 
