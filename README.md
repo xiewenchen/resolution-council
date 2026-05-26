@@ -1,52 +1,26 @@
 # 🏛️ Resolution Council AI
 
-> **Turn any idea into a production-ready system design in seconds.**
+> **Stop designing system architecture manually.**
 
-A structured reasoning engine that transforms natural language requirements into complete system architecture designs — with explicit trade-offs, multi-perspective evaluation, and automated fusion.
+One-call system design compiler. Natural language in → production architecture out.
 
----
-
-## Why this exists
-
-Designing system architecture is:
-- **Slow** — hours of whiteboarding and research
-- **Inconsistent** — quality depends entirely on who's in the room
-- **Hard to standardize** — every architect has their own process
-- **Experience-gated** — juniors can't produce senior-quality designs
-
-**Resolution Council AI automates this.** Describe what you want to build. Get back a structured, production-ready architecture plan.
-
----
-
-## Core Capabilities
-
-| Capability | What it does |
-|-----------|-------------|
-| 🏗️ **Architecture Generation** | Produces complete system designs from natural language |
-| 🔍 **Multi-Perspective Evaluation** | Evaluates designs through 5 independent lenses (architecture, cost, risk, scalability, innovation) |
-| ⚖️ **Automatic Trade-off Resolution** | Detects conflicts, ranks alternatives, merges into a coherent plan |
-
----
-
-## Usage
+```text
+Before: Chat with LLM  →  vague prose, no structure, no trade-offs
+After:  resolve(task)  →  architecture + cost + risk + roadmap + ranked trade-offs
+```
 
 ```python
 from resolution_council import ResolutionCouncil
 
-council = ResolutionCouncil()
-
-result = council.resolve(
-    "Design a real-time voice translation system"
-)
-
-print(result.final_plan)
+plan = ResolutionCouncil().resolve("build a real-time translation system")
+print(plan.final_plan)
 ```
 
-**That's it.** One import, one call, one output.
+**Zero dependencies. Deterministic. <1ms.**
 
 ---
 
-## What you get
+## Output
 
 **Input:**
 > "Design a real-time voice translation system with subtitles, supporting Chinese and English, sub-500ms latency, offline capable"
