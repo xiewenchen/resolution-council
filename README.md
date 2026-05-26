@@ -179,8 +179,4 @@ not a language generation problem.
 
 Resolution Council AI replaces "manual system design thinking" with "structured AI architecture generation."
 
----
 
-## License
-
-MIT
